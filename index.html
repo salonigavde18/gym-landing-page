@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gym Landing Page</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header>
+        <nav>
+          <div class="logo">POWER HOUSE</div>
+          <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          <ul class="nav-links" id="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#request-call">Contact</a></li>
+          </ul>
+        </nav>
+      </header>    
+
+    <section id="hero" class="hero">
+      <h1>Welcome to POWER HOUSE</h1>
+      <p>Get fit, stay healthy, and achieve your fitness goals with us.</p>
+      <a href="#services" class="cta-button">Explore Our Services</a>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About Us</h2>
+      <p>
+        We are a top-tier fitness center providing the best equipment and
+        training programs to help you meet your goals.
+      </p>
+    </section>
+
+    <section id="services" class="services">
+      <h2>Our Services</h2>
+      <div class="service-card">
+        <div class="card">
+          <h3>Personal Training</h3>
+          <p>Work with certified trainers to reach your fitness goals.</p>
+        </div>
+        <div class="card">
+          <h3>Group Classes</h3>
+          <p>Join a variety of fitness classes designed to challenge and motivate.</p>
+        </div>
+        <div class="card">
+          <h3>Nutrition Plans</h3>
+          <p>
+            Personalized meal plans tailored to your health and fitness needs.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="testimonials">
+      <h2>What our Clients say</h2>
+      <div class="test-card">
+        <div class="card">
+          <p>"The best gym experience I've ever had. Great trainers!"</p>
+          <h4>- John Doe</h4>
+        </div>
+        <div class="card">
+          <p>"I love the group classes, they keep me motivated!"</p>
+          <h4>- Jane Smith</h4>
+        </div>
+      </div>
+    </section>
+
+    <section id="request-call" class="request-call py-10">
+        <div class="container mx-auto px-4">
+          <h2 class="text-3xl font-bold text-center mb-6">Request a Phone Call</h2>
+          <p class="text-lg text-center mb-10">Want to learn more about our programs? Fill out the form, and we’ll get in touch with you soon.</p>
+      
+          <!-- ShadCN UI Form -->
+          <form action="/submit-request" method="POST" class="request-form max-w-lg mx-auto space-y-4">
+            <!-- ShadCN Input Fields -->
+            <div class="form-group">
+              <label for="name" class="block text-sm font-medium">Your Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your name" class="w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+      
+            <div class="form-group">
+              <label for="phone" class="block text-sm font-medium">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" class="w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500">
+            </div>
+      
+            <div class="form-group">
+              <label for="message" class="block text-sm font-medium">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Tell us how we can help" class="w-full px-4 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500"></textarea>
+            </div>
+      
+            <!-- ShadCN Button -->
+            <button type="submit" class="btn w-full py-2 px-4 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500">
+              Request a Call
+            </button>
+          </form>
+        </div>
+      </section>
+      
+    <footer>
+      <p>&copy; 2024 Power House. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('nav-links');
+      
+        burger.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+        });
+      </script>
+      
+  </body>
+</html>
